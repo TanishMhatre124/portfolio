@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certifications — Tanish Mhatre</title>
+    <link rel="icon" href="images (1).png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+        :root {
+            --bg-primary: #071428;
+            --secondary-bg: #061226;
+            --highlight: #64ffda;
+            --secondary-text: #9fb0c6;
+            --nav-bg: rgba(7, 20, 40, 0.9);
+            --text-primary: #e6f0f6;
+        }
+        body { background: radial-gradient(circle at 10% 10%, rgba(100,255,218,0.03), transparent 20%), linear-gradient(180deg, #071428 0%, #041627 100%); color:var(--text-primary); }
+        .logo-circle { width:64px; height:64px; border-radius:9999px; background:linear-gradient(135deg,#05f6d6 0%,#0ea5a0 60%); display:inline-flex; align-items:center; justify-content:center; box-shadow:0 16px 44px rgba(2,6,23,0.7); border:1px solid rgba(5,246,214,0.22); }
+        .logo-circle > span{ font-family: Cinzel, serif; font-weight:700; color:#fff; }
+        nav { position:fixed; inset:0 auto auto 0; height:80px; width:100%; display:flex; align-items:center; justify-content:space-between; padding:0 6vw; background:var(--nav-bg); backdrop-filter:blur(8px); border-bottom:1px solid rgba(100,255,218,0.06); z-index:50 }
+        .nav-link{ color:#fff; padding:.6rem 1rem; border-radius:.5rem }
+        .nav-link.active, .nav-link[aria-current="page"] { color:var(--bg-primary); background:var(--highlight); }
+        .cert-grid{ display:grid; grid-template-columns: repeat(1, minmax(0,1fr)); gap:1.25rem; }
+        @media (min-width:640px){ .cert-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); } }
+        @media (min-width:1024px){ .cert-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); } }
+        .cert-card{ background:rgba(17,34,64,0.9); padding:1rem; border-radius:.75rem; border:1px solid rgba(100,255,218,0.06); display:flex; flex-direction:column; gap:.75rem }
+        .btn-primary{ background:var(--highlight); color:var(--bg-primary); padding:.5rem .75rem; border-radius:.5rem; font-weight:600 }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="p-2.5">
+            <a href="index.html#home" class="logo-circle" aria-label="Tanish Mhatre logo">
+                <span class="font-cinzel">TM</span>
+            </a>
+        </div>
+        <div>
+            <ul class="flex gap-6 items-center">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="index.html#education" class="nav-link">Education</a></li>
+                <li><a href="index.html#experience" class="nav-link">Experience</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="index.html#blog" class="nav-link">Blog</a></li>
+                <li><a href="#" class="nav-link active" aria-current="page">Certifications</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="pt-28 px-6 md:px-12 max-w-6xl mx-auto">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl font-bold">Certifications</h1>
+            <p class="text-secondary-text mt-2">Verified certificates and professional credentials</p>
+        </header>
+
+        <section class="certificates">
+            <div class="cert-grid">
+                <!-- Certificate Card -->
+                <article class="cert-card">
+                    <img src="images/cert1.jpeg" alt="Certificate 1" class="w-full h-44 object-cover rounded" data-full="images/cert1.png" tabindex="0">
+                    <h3 class="text-lg font-semibold">Machine Learning & Python — Data Science for Business and AI</h3>
+                    <p class="text-sm text-secondary-text">Udemy — Brighter Futures Hub</p>
+                    <p class="text-sm text-secondary-text">Issued: June 23, 2026</p>
+                    <div class="mt-auto">
+                        <a href="https://www.udemy.com/share/101WsU3@dtI_XdGhssEvNCy6byQZwV6eT0lSZY1NHflwGW0JgEsvCTcqLh0yy_EYpdJ6msip4w==/" target="_blank" rel="noopener" class="btn-primary inline-block">View Certificate</a>
+                    </div>
+                </article>
+
+                <article class="cert-card">
+                    <img src="images/cert2.jpeg" alt="Certificate 2" class="w-full h-44 object-cover rounded" data-full="images/cert2.png" tabindex="0">
+                    <h3 class="text-lg font-semibold">Full Stack Web Development</h3>
+                    <p class="text-sm text-secondary-text">Udemy</p>
+                    <p class="text-sm text-secondary-text">Issued: Sep 2024</p>
+                    <div class="mt-auto">
+                        <a href="#" target="_blank" rel="noopener" class="btn-primary inline-block">View Certificate</a>
+                    </div>
+                </article>
+
+                <article class="cert-card">
+                    <img src="images/cert3.jpeg" alt="Certificate 3" class="w-full h-44 object-cover rounded" data-full="images/cert3.png" tabindex="0">
+                    <h3 class="text-lg font-semibold">AWS Fundamentals</h3>
+                    <p class="text-sm text-secondary-text">Amazon Web Services</p>
+                    <p class="text-sm text-secondary-text">Issued: Jun 2023</p>
+                    <div class="mt-auto">
+                        <a href="#" target="_blank" rel="noopener" class="btn-primary inline-block">View Certificate</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="mt-8 text-center">
+            <a href="index.html" class="btn-primary">Back to Portfolio</a>
+        </div>
+    </main>
+
+    <!-- Lightbox / Modal -->
+    <div id="lightbox" aria-hidden="true" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70">
+        <div class="max-w-4xl w-full px-4">
+            <div class="bg-transparent p-4 rounded">
+                <button id="lightboxClose" aria-label="Close preview" class="text-white mb-4 text-2xl">&times;</button>
+                <img id="lightboxImg" src="" alt="Certificate preview" class="w-full h-auto rounded shadow-lg">
+                <div class="mt-3 text-center">
+                    <a id="lightboxView" href="#" target="_blank" rel="noopener" class="btn-primary inline-block">Open Certificate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function(){
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightboxImg');
+            const lightboxView = document.getElementById('lightboxView');
+            const closeBtn = document.getElementById('lightboxClose');
+
+            function openLightbox(src, viewLink){
+                lightboxImg.src = src;
+                lightboxView.href = viewLink || '#';
+                lightbox.classList.remove('hidden');
+                lightbox.setAttribute('aria-hidden','false');
+                document.body.style.overflow = 'hidden';
+                closeBtn.focus();
+            }
+
+            function closeLightbox(){
+                lightbox.classList.add('hidden');
+                lightbox.setAttribute('aria-hidden','true');
+                document.body.style.overflow = '';
+            }
+
+            // Attach click handlers to "View Certificate" buttons only
+            document.querySelectorAll('.cert-card .btn-primary').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    // Only intercept in-page view actions; if the button's href points to a real external link
+                    // we still open the lightbox but keep the external URL available via the modal's Open Certificate button.
+                    e.preventDefault();
+                    const parent = btn.closest('.cert-card');
+                    const img = parent.querySelector('img');
+                    const src = img?.getAttribute('data-full') || img?.src || '';
+                    const view = btn.getAttribute('href') || '#';
+                    openLightbox(src, view);
+                });
+                btn.addEventListener('keydown', (e) => {
+                    if(e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        btn.click();
+                    }
+                });
+            });
+
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', (e) => { if(e.target === lightbox) closeLightbox(); });
+            document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeLightbox(); });
+        })();
+    </script>
+</body>
+</html>
