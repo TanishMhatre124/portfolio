@@ -6,6 +6,8 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 
 export function ProjectCard({ project, index = 0 }: { project: Project; index?: number }) {
+  const displayedTech = project.techStack.slice(0, 4);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
@@ -37,13 +39,18 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
               {project.title}
             </h3>
           </Link>
-          <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-fog">{project.description}</p>
+
+          <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-fog">
+            {project.description}
+          </p>
 
           <div className="mt-4 flex flex-wrap gap-1.5">
-            {project.techStack.slice(0, 4).map((tech) => (
+            {displayedTech.map((tech, index) => (
               <span key={tech} className="font-mono text-[11px] text-fog">
                 {tech}
-                {tech !== project.techStack.slice(0, 4).at(-1) && <span className="ml-1.5 text-line">/</span>}
+                {index !== displayedTech.length - 1 && (
+                  <span className="ml-1.5 text-line">/</span>
+                )}
               </span>
             ))}
           </div>
@@ -55,14 +62,28 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
             >
               View details
             </Link>
+
             <div className="flex items-center gap-3 text-fog">
               {project.sourceUrl && (
-                <a href={project.sourceUrl} target="_blank" rel="noreferrer noopener" aria-label="Source code" className="hover:text-signal">
+                <a
+                  href={project.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Source code"
+                  className="hover:text-signal"
+                >
                   <Github size={16} />
                 </a>
               )}
+
               {project.demoUrl && (
-                <a href={project.demoUrl} target="_blank" rel="noreferrer noopener" aria-label="Live demo" className="hover:text-signal">
+                <a
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  aria-label="Live demo"
+                  className="hover:text-signal"
+                >
                   <ArrowUpRight size={16} />
                 </a>
               )}
