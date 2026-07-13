@@ -21,6 +21,19 @@ export function Hero() {
             {personalInfo.availability}
           </motion.div>
 
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.04, ease: [0.16, 1, 0.3, 1] }}
+            className="mb-5 space-y-1"
+          >
+            <p className="font-mono text-xs uppercase tracking-wider text-fog">Hello, I'm</p>
+            <p className="font-display text-3xl font-semibold leading-tight text-paper sm:text-4xl">
+              Tanish Mhatre
+            </p>
+            <p className="text-sm uppercase tracking-wider text-signal">Data Analytics & AI Engineer</p>
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}

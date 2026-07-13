@@ -55,37 +55,55 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
             ))}
           </div>
 
-          <div className="mt-6 flex items-center justify-between border-t border-line pt-4">
+          <div className="mt-auto flex items-center justify-between border-t border-line pt-4">
             <Link
               to={`/projects/${project.slug}`}
-              className="font-mono text-xs uppercase tracking-wider text-signal transition-colors hover:text-paper"
+              className="font-mono text-xs uppercase tracking-wider text-signal transition-all hover:text-paper hover:underline hover:underline-offset-4"
             >
-              View details
+              VIEW DETAILS
             </Link>
 
             <div className="flex items-center gap-3 text-fog">
-              {project.sourceUrl && (
+              {project.sourceUrl ? (
                 <a
                   href={project.sourceUrl}
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label="Source code"
-                  className="hover:text-signal"
+                  className="flex items-center gap-2 rounded px-2 py-1 text-sm text-signal transition-all duration-150 hover:text-paper hover:underline hover:underline-offset-4 hover:bg-signal/6 hover:-translate-y-1"
                 >
                   <Github size={16} />
+                  <span className="font-mono text-xs uppercase">GitHub</span>
                 </a>
+              ) : (
+                <div
+                  aria-hidden="true"
+                  className="flex items-center gap-2 rounded px-2 py-1 text-sm opacity-40 pointer-events-none"
+                >
+                  <Github size={16} />
+                  <span className="font-mono text-xs uppercase">GitHub</span>
+                </div>
               )}
 
-              {project.demoUrl && (
+              {project.demoUrl ? (
                 <a
                   href={project.demoUrl}
                   target="_blank"
                   rel="noreferrer noopener"
                   aria-label="Live demo"
-                  className="hover:text-signal"
+                  className="flex items-center gap-2 rounded px-2 py-1 text-sm text-signal transition-all duration-150 hover:text-paper hover:underline hover:underline-offset-4 hover:bg-signal/6 hover:-translate-y-1"
                 >
                   <ArrowUpRight size={16} />
+                  <span className="font-mono text-xs uppercase">Live Demo</span>
                 </a>
+              ) : (
+                <div
+                  aria-hidden="true"
+                  className="flex items-center gap-2 rounded px-2 py-1 text-sm opacity-40 pointer-events-none"
+                >
+                  <ArrowUpRight size={16} />
+                  <span className="font-mono text-xs uppercase">Live Demo</span>
+                </div>
               )}
             </div>
           </div>

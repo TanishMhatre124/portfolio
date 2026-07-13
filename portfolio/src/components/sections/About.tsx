@@ -25,7 +25,6 @@ export function About() {
 
             <div className="grid grid-cols-2 gap-4 pt-2 sm:grid-cols-4">
               {[
-                { label: "Focus areas", value: "3" },
                 { label: "Shipped projects", value: "4+" },
                 { label: "CGPA", value: "8.79" },
                 { label: "Publications", value: "1" },

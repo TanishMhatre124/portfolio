@@ -66,13 +66,8 @@ export function GitHubActivity() {
         </div>
 
         <Card className="mb-8 overflow-hidden p-4">
-          {/* Public, no-auth contribution graph render via github-readme-stats (open source service) */}
-          <img
-            src={`https://ghchart.rshah.org/2da44e/${GITHUB_USERNAME}`}
-            alt={`${GITHUB_USERNAME} GitHub contribution graph`}
-            loading="lazy"
-            className="w-full brightness-110 contrast-110 saturate-125"
-          />
+          {/* Prefer GitHub's official contribution SVG; fall back to ghchart if unavailable */}
+          <GitHubContribImage username={GITHUB_USERNAME} className="w-full brightness-110 contrast-110 saturate-125" />
         </Card>
 
         {error && (
@@ -157,5 +152,28 @@ export function GitHubActivity() {
         )}
       </div>
     </section>
+  );
+}
+
+function GitHubContribImage({
+  username,
+  className,
+}: {
+  username: string;
+  className?: string;
+}) {
+  const [src, setSrc] = useState(
+    `https://github.com/users/${username}/contributions`
+  );
+
+  return (
+    // eslint-disable-next-line jsx-a11y/img-redundant-alt
+    <img
+      src={src}
+      alt={`${username} GitHub contribution graph`}
+      loading="lazy"
+      className={className}
+      onError={() => setSrc(`https://ghchart.rshah.org/2da44e/${username}`)}
+    />
   );
 }

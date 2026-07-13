@@ -6,14 +6,14 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
-    id: "tutor-ai",
-    slug: "tutor-ai-local-llm-teaching-assistant",
-    title: "Tutor.AI — Local LLM Teaching Assistant",
-    tagline: "An offline teaching assistant built for classrooms without reliable connectivity.",
+    id: "mutual-fund-analysis",
+    slug: "mutual-fund-analysis",
+    title: "Mutual Fund Analysis",
+    tagline: "A Streamlit app for mutual fund performance analysis and insights.",
     description:
-      "A specialized teaching assistant for under-resourced areas, running Llama 3.2-3B entirely on-device with ONNX Runtime optimization and a custom RAG pipeline for grounded, accurate answers.",
-    image: "/images/proj1.jpeg",
-    gallery: ["/images/proj1.jpeg"],
+      "An interactive Streamlit app that analyzes mutual fund performance, visualizes returns, and helps investors compare funds using key metrics.",
+    image: "/images/mutualfund.jpeg",
+    gallery: ["/images/mutualfund.jpeg"],
     categories: ["AI", "Machine Learning", "Research"],
     techStack: ["Local LLMs", "ONNX Runtime", "RAG", "Python", "Llama 3.2-3B"],
     highlights: [
@@ -21,8 +21,8 @@ export const projects: Project[] = [
       "Improved answer accuracy by 85% with a custom RAG pipeline",
       "Reduced memory footprint by 60% for low-resource hardware",
     ],
-    demoUrl: null,
-    sourceUrl: null,
+    demoUrl: "https://mutualfundanalysis-app.streamlit.app/",
+    sourceUrl: "https://github.com/TanishMhatre124/MUTUAL_FUND_ANALYSIS.git",
     featured: true,
     overview:
       "Tutor.AI is a locally-run teaching assistant designed for schools where internet access is unreliable or unavailable. Instead of depending on a cloud API, the entire model runs on-device, which meant every design decision had to account for constrained compute.",
